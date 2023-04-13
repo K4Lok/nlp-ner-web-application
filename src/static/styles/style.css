@@ -63,6 +63,12 @@ input {
     transition: border-color 1s linear;
 }
 
+input.entered {
+    outline:none;
+    border-color:#a795ee;
+    box-shadow:0 0 16px #a795ee;
+}
+
 input:focus { 
     outline:none;
     border-color:#9ecaed;
