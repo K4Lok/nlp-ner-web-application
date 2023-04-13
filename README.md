@@ -29,7 +29,7 @@ python3 -m venv venv
 Activating the venv:
 
 ```bash
-source env/bin/activate
+source venv/bin/activate
 ```
 
 At this stage, you have a seperated environment for accessing the modules for this project. You might want to install the required modules altogether, so run the following command to install all of them:
