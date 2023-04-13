@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>NER Model</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+<script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+
+{% endblock %}
+
+{% block body %}
+
+<main class="max-w">
+    <div class="description">
+        <h2 class="gradient-text">What's NER?</h2>
+        <p>Named entity recognition (NER) is a subfield of natural language processing that involves identifying and classifying named entities in text into predefined categories such as people, organizations, locations, dates, and more.</p>
+    </div>
+    <div class="description">
+        <h2 class="gradient-text">Let's try it out!</h2>
+        <p>Enter a sentence in the above input field, then we can show whether the words are a person name or not.</p>
+    </div>
+    
+    <form id="nerForm" method="GET">
+        <input id="nerInput" type="text" placeholder="Enter input here">
+    </form>
+</main>
+
+{% endblock %}

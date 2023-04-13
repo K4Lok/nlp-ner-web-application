@@ -1,0 +1,77 @@
+{%extends 'base.html' %}
+
+{% block head %}
+
+<title>Query</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+<script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+
+{% endblock %}
+
+{% block body %}
+
+<main class="max-w">
+    <div class="description">
+        <h2 class="gradient-text">What's NER?</h2>
+        <p>Named entity recognition (NER) is a subfield of natural language processing that involves identifying and classifying named entities in text into predefined categories such as people, organizations, locations, dates, and more.</p>
+    </div>
+    <div class="description">
+        <h2 class="gradient-text">Let's try it out!</h2>
+        <p>Enter a sentence in the above input field, we can then show the words are a person name or not.</p>
+    </div>
+    
+    <form id="nerForm" method="GET">
+        <input id="nerInput" type="text" value="{{ sentence }}" placeholder="Enter input here">
+    </form>
+    
+    <div class="">
+        <h3 class="gradient-text-output">Label</h2>
+        <div class="output">
+            <ul>
+                {% for i in range(0, pdists | length) %}
+                    <li class="word-pair">
+                        <span class="word">{{ words[i] }}</span>
+                        <div class="highlight"></div>
+                        {% if pdists[i].prob('PERSON') > pdists[i].prob('O') %}
+                            <span class="label person-name">{{ "Person Name" }}</span>
+                        {% else %}
+                            <span class="label">{{ "X" }}</span>
+                        {% endif %}
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <h3 class="gradient-text-output">Probability</h2>
+        <!-- <div class="output">
+            <ol>
+                {% for i in range(0, pdists | length) %}
+                    <li class="">
+                        <span class="word">{{ words[i] }}: </span>
+                        <span class="">[{{ pdists[i].prob('PERSON') | round(2, 'ceil') }}] - </span>
+                        <span class="">[{{ pdists[i].prob('O') | round(2, 'ceil') }}]</span>
+                    </li>
+                {% endfor %}
+            </ol>
+        </div> -->
+        <div class="prob-table">
+            <table>
+                <tr>
+                    <th>Word</th>
+                    <th>X</th>
+                    <th>Person Name</th>
+                </tr>
+                {% for i in range(0, pdists | length) %}
+                    <tr>
+                        <td>{{ words[i] }}</td>
+                        <td>{{ pdists[i].prob('O') | round(2, 'ceil') }}</td>
+                        <td>{{ pdists[i].prob('PERSON') | round(2, 'ceil') }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

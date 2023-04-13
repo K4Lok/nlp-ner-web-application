@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #fff;
+    /* color: #fff; */
+    padding-block: 2rem;
+    text-align: start;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    margin-block: 6rem;
+}
+
+h1 {
+    color: #353535;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    margin-block: 2rem;
+}
+
+.description {
+    margin-top: 5rem;
+}
+
+.description p {
+    font-size: 1.2rem;
+}
+
+input {
+    display: block;
+    margin: 50px auto;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    border-color:#000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 20px;
+    color: #555;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 1s linear;
+}
+
+input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 16px #9ecaed;
+}
+
+.output {
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 18px;
+    color: #555;
+    background-color: #fff;
+}
+
+.output ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.word-pair {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.word {
+    font-weight: bold;
+}
+
+.label {
+    font-weight: normal;
+    color: #6c6c6c;
+}
+
+.person-name {
+    color: #9ecaed;
+}
+
+.highlight {
+    width: 100%;
+    height: 4px;
+    background-color: #7c67e96b;
+    border-radius: 10px;
+}
+
+.prob-table {
+    margin: 20px auto;
+    font-size: 18px;
+    color: #555;
+}
+
+table {
+	border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid rgb(144, 144, 144);
+	padding: 1rem 2rem;
+}
+
+
+footer {
+    padding-block: 0.6rem;
+    background-color: rgb(57, 57, 57);
+}
+
+footer p {
+    color: rgb(214, 214, 214);
+    text-align: center;
+}
+
+footer span {
+    color: #a58ac8;
+}
+
+/* Utility Classes */
+
+.max-w {
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 4rem;
+}
+
+.gradient-text {
+    background: #7027CF;
+    background: linear-gradient(to right, #7027CF 0%, #CF2385 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-output {
+    background: #CF36A1;
+    background: linear-gradient(to right, #CF36A1 0%, #CF806C 51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
