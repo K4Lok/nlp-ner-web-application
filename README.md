@@ -2,7 +2,7 @@
 
 Here's a project on exploring and testing out the NER model. We are given words with label (it's a person name or not) for the training process. Then after we have our model, we can use a Python Web Server to output to prediction of the inputed words on the website.
 
-<img width="1420" alt="Screenshot 2023-04-14 at 1 49 32 AM" src="https://user-images.githubusercontent.com/82365010/231842664-fd2ef01e-d60e-471c-888b-d7dba87c0e85.png">
+<img width="1427" alt="Screenshot 2023-04-14 at 2 12 22 AM" src="https://user-images.githubusercontent.com/82365010/231847671-d85e51b4-bf43-4bf5-9798-a18dc8298b68.png">
 
 ## Keywords
 
